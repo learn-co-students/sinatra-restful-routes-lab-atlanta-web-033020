@@ -1,0 +1,11 @@
+<h1>This Is The Edit Page For <%=@recipe[:name]%></h1>
+<form method="POST" action="/recipes/<%=@recipe[:id]%>">
+    <label for="name">Name:</label><br>
+        <input type="text" default="<%=@recipe[:name]%>" name="name"><br>
+    <label for="ingredients">Ingredients:</label><br>
+        <input type="text" default="<%=@recipe[:ingredients]%>" name="ingredients"><br>
+    <label for="cook_time">Cook Time:</label><br>
+        <input type="text" default="<%=@recipe[:cook_time]%>" name="cook_time"><br>
+    <input type="hidden" id="hidden" name="_method" value="PATCH">
+    <input type="submit" id="Submit">
+</form>
